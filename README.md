@@ -4,6 +4,8 @@ A ImageJ macro to create artistic pictures from raw tiff images
 The SD Jovian Raw Image Processor (SDJRIP) ImageJ macro was created in response to the NASA Space International Apps Challenge 2022 competition. The “Visualizing Jovian System Like Never Before” problem tasked competitors with creating an open-source image editing program that uses innovative methods to process raw JunoCam raw images for scientific, artistic, or other fun purposes. The authors chose to tackle the problem by using the freeware program ImageJ and specifically the “batteries included” version of ImageJ called FIJI (Its just ImageJ).
 A macro was created that runs in FIJI and allows the user to process raw JunoCam images. The Macro performs the following operations on the JunoCam images: 1) converts image to 16-bit greyscale, 2) duplicates image, 3) duplicate image is blurred using Gaussian filter, 4) the blurred image is subtracted from original, 5) a fire lookup table (LUT) is applied, 6) the brightness and contrast is adjusted, and 7) the view is magnified 2xfold to see detail. The final image is an artistic rendering of the original and enhances details of the swirling clouds of Jupiter, due to loss pass effect of Gaussian filter, with loss of some information and blurring of the image. The loss of information and slight blurring is okay given the purpose of the macro is to create “pretty artistic” pictures. The macro can be used on the raw framelets, RGB image, or individual RGB channels. 
 
+read manual file for installation instructions. 
+
 Code in the SDJRIP macro is listed below:
 
  //SD_Jovian_raw_image_processor macro 
