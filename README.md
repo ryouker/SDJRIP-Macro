@@ -25,38 +25,49 @@ Code in the SDJRIP macro is listed below:
  open(path); 
  
 //rename open image1
+
 rename("image1");
 
 //convert image to 16-bit greyscale 
+
 run("16-bit");
 
 //duplicates image1 and names duplicate image2_to_blur
+
 run("Duplicate...", "title=[image2_to_blur]");
 
 //performs gaussian blur filter on image2
+
 run("Gaussian Blur...", "sigma=3");
 
 //subtracts blur image2 from image1
+
 imageCalculator("Subtract create", "image1","image2_to_blur");
 
 //renames Result of Image1 to Result_of_Image1
+
 rename("Result_of_Image1")
 
 selectWindow("Result_of_Image1");
 
 //adds Fire LUT to resultant image
+
 run("Fire");
 
 //opens brightness/contrast command 
+
 run("Brightness/Contrast...");
 
 //sets brightness min and max
+
 setMinAndMax(0, 8);
 
 close("B&C")
 
 //close all windows but active image
+
 close("\\Others")
 
 //zooms in on image
+
 run("In [+]");
